@@ -19,8 +19,10 @@ function App({ initialSeed }: { initialSeed?: number }) {
           Randomise
         </button>
       </div>
-      <Board layout={layout} />
-      <Dice />
+      <div className="play-area">
+        <Board layout={layout} />
+        <Dice />
+      </div>
     </main>
   )
 }

@@ -93,8 +93,13 @@ body {
   pointer-events: none;
 }
 
-.dice-area {
-  margin-top: 1.5rem;
+/* The board, with the dice to its right. On a narrow screen the dice drop below it. */
+.play-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem 3rem;
 }
 
 .dice {
@@ -103,7 +108,7 @@ body {
   display: flex;
   gap: 2.5rem;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   perspective: 600px;
 }
 
@@ -172,9 +177,15 @@ body {
   }
 }
 
+/* Under the dice, the button is centred and what was rolled shows beneath it. */
+.dice-area .controls {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .dice-total {
-  min-width: 9rem;
-  text-align: left;
+  /* Keeps its line when empty, so the button does not move when a roll starts. */
+  min-height: 1.5em;
   font-weight: 600;
 }
 
