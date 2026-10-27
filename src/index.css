@@ -1,8 +1,8 @@
 :root {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
-  color: #213547;
-  background-color: #ffffff;
+  color: #3e2a14;
+  background-color: #fffaf2;
 }
 
 body {
@@ -15,4 +15,80 @@ body {
 
 .app {
   text-align: center;
+  padding: 1rem;
+}
+
+.app h1 {
+  margin: 0 0 0.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.controls button {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border: 3px solid #5d3a14;
+  border-radius: 999px;
+  background: #e0a458;
+  color: #3e2a14;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #5d3a14;
+}
+
+.controls button:hover {
+  background: #eab36d;
+}
+
+.controls button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #5d3a14;
+}
+
+.board {
+  position: relative;
+  width: min(90vw, 80vh, 640px);
+  aspect-ratio: 1;
+  border: 6px solid #5d3a14;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(62, 42, 20, 0.35);
+}
+
+.squares {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: clamp(0.6rem, 2.2vmin, 1rem);
+}
+
+.square-light {
+  background-color: #f3e2c7;
+}
+
+.square-dark {
+  background-color: #c9a27a;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
