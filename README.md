@@ -20,5 +20,5 @@ Then open the URL that Vite prints (usually http://localhost:5173).
 | `npm run dev`     | Start the development server                   |
 | `npm run build`   | Type-check and build for production into `dist/` |
 | `npm run preview` | Serve the production build locally             |
-| `npm run lint`    | Lint the code with oxlint                      |
+| `npm run lint`    | Lint the code with ESLint                      |
 | `npm test`        | Run the tests with Vitest                      |
