@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import Board from './Board.tsx'
+import Dice from './Dice.tsx'
 import { generateBoard } from './boardLayout.ts'
 import { newSeed } from './random.ts'
 
@@ -19,6 +20,7 @@ function App({ initialSeed }: { initialSeed?: number }) {
         </button>
       </div>
       <Board layout={layout} />
+      <Dice />
     </main>
   )
 }

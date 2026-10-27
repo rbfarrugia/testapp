@@ -29,6 +29,12 @@ describe('App', () => {
     expect(container.querySelectorAll('.ladder')).toHaveLength(6)
   })
 
+  it('shows two dice with a Roll dice button', () => {
+    render(<App initialSeed={42} />)
+    expect(screen.getAllByRole('img', { name: /^Die showing/ })).toHaveLength(2)
+    expect(screen.getByRole('button', { name: 'Roll dice' })).toBeTruthy()
+  })
+
   it('picks a new seed when Randomise is clicked', () => {
     const { container } = render(<App initialSeed={42} />)
     const seed = () => container.querySelector('.seed strong')?.textContent

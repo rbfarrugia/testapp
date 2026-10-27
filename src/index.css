@@ -92,3 +92,103 @@ body {
   height: 100%;
   pointer-events: none;
 }
+
+.dice-area {
+  margin-top: 1.5rem;
+}
+
+.dice {
+  --die-size: 64px;
+  --die-half: 32px;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  perspective: 600px;
+}
+
+.die {
+  width: var(--die-size);
+  height: var(--die-size);
+  transform-style: preserve-3d;
+  /* Tilt the die so the top and side faces show: a semi-3D view. */
+  transform: rotateX(-22deg) rotateY(28deg);
+}
+
+.die-cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 800ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.die-face {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 8px;
+  place-items: center;
+  background: linear-gradient(135deg, #ffffff, #f1e6d6);
+  border: 2px solid #5d3a14;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(93, 58, 20, 0.25);
+  backface-visibility: hidden;
+}
+
+.pip {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #6b4a2a, #2b1a0a);
+}
+
+.die-face-1 .pip {
+  background: radial-gradient(circle at 35% 35%, #ef5350, #8e0000);
+  width: 15px;
+  height: 15px;
+}
+
+.dice-rolling .die {
+  animation: die-hop 800ms ease-out;
+}
+
+@keyframes die-hop {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  35% {
+    translate: 0 -28px;
+  }
+  65% {
+    translate: 0 0;
+  }
+  80% {
+    translate: 0 -6px;
+  }
+}
+
+.dice-total {
+  min-width: 9rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.controls button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .die-cube {
+    transition-duration: 150ms;
+  }
+
+  .dice-rolling .die {
+    animation: none;
+  }
+}
