@@ -23,3 +23,5 @@ Then open the URL that Vite prints (usually http://localhost:5173).
 | `npm run lint`    | Lint the code with ESLint                      |
 | `npm test`        | Run the tests with Vitest                      |
 Resume test
+
+Xvfb test.
