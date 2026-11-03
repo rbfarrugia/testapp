@@ -1,6 +1,6 @@
 # Snakes and Ladders
 
-A Snakes and Ladders game built with React and TypeScript, using [Vite](https://vite.dev/). Tagline B.
+A Snakes and Ladders game built with React and TypeScript, using [Vite](https://vite.dev/). Tagline A. Tagline B.
 
 ## Getting started
 
