@@ -1,6 +1,6 @@
 # Snakes and Ladders
 
-A Snakes and Ladders game built with React and TypeScript, using [Vite](https://vite.dev/).
+A Snakes and Ladders game built with React and TypeScript, using [Vite](https://vite.dev/). Tagline A. Tagline B.
 
 ## Getting started
 
@@ -22,5 +22,6 @@ Then open the URL that Vite prints (usually http://localhost:5173).
 | `npm run preview` | Serve the production build locally             |
 | `npm run lint`    | Lint the code with ESLint                      |
 | `npm test`        | Run the tests with Vitest                      |
+Resume test
 
 Xvfb test.
